@@ -1,6 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# introduction
+
+以社团人员管理为实际需求的人员信息管理项目，可适用于中小型甚至大型人员管理，此为项目前端部分。
+设计目的：
+
+1. 社团成员纳新自动化处理
+2. 收集管理信息
 
 # Develop
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
