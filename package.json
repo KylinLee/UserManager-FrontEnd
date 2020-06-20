@@ -34,6 +34,7 @@
     "file-loader": "4.3.0",
     "fs-extra": "^8.1.0",
     "graphql": "^15.1.0",
+    "hox": "^1.1.1",
     "html-webpack-plugin": "4.0.0-beta.11",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.9.0",
@@ -52,6 +53,7 @@
     "react-app-polyfill": "^1.0.6",
     "react-dev-utils": "^10.2.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.2",
@@ -139,5 +141,9 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.38",
+    "typescript": "^3.9.5"
   }
 }
