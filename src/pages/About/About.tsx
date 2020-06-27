@@ -1,4 +1,5 @@
 import React from "react";
+import "./About.scss"
 
 function About() {
     return <h1>About Page</h1>;
