@@ -47,6 +47,7 @@ dependencies:
   postcss-normalize: 8.0.1
   postcss-preset-env: 6.7.0
   postcss-safe-parser: 4.0.1
+  qiankun: 2.0.16
   react: 16.13.1
   react-app-polyfill: 1.0.6
   react-dev-utils: 10.2.1
@@ -1405,6 +1406,13 @@ packages:
     resolution:
       integrity: sha1-Zw0AJlWnw2ZUDGf2/TNCzQlQA2Q=
       tarball: '@babel/runtime/download/@babel/runtime-7.10.3.tgz'
+  /@babel/runtime/7.10.4:
+    dependencies:
+      regenerator-runtime: 0.13.5
+    dev: false
+    resolution:
+      integrity: sha1-pnJPGmuNL26lI22/5Yx9fqnF65k=
+      tarball: '@babel/runtime/download/@babel/runtime-7.10.4.tgz'
   /@babel/runtime/7.9.0:
     dependencies:
       regenerator-runtime: 0.13.5
@@ -6817,6 +6825,13 @@ packages:
     resolution:
       integrity: sha1-M1238qev/VOqpHHUuAId7ja387E=
       tarball: import-from/download/import-from-2.1.0.tgz
+  /import-html-entry/1.7.4:
+    dependencies:
+      '@babel/runtime': 7.10.4
+    dev: false
+    resolution:
+      integrity: sha1-QLvUJpuqAO0phqHSBS5oGMHJI3k=
+      tarball: import-html-entry/download/import-html-entry-1.7.4.tgz
   /import-local/2.0.0:
     dependencies:
       pkg-dir: 3.0.0
@@ -10884,6 +10899,17 @@ packages:
     resolution:
       integrity: sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
       tarball: q/download/q-1.5.1.tgz
+  /qiankun/2.0.16:
+    dependencies:
+      '@babel/runtime': 7.10.4
+      import-html-entry: 1.7.4
+      lodash: 4.17.15
+      single-spa: 5.5.4
+      tslib: 1.13.0
+    dev: false
+    resolution:
+      integrity: sha1-NE0veKBnsgmSovrd9GdMCKf7i4E=
+      tarball: qiankun/download/qiankun-2.0.16.tgz
   /qs/6.5.2:
     engines:
       node: '>=0.6'
@@ -11979,6 +12005,11 @@ packages:
     resolution:
       integrity: sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
       tarball: simple-swizzle/download/simple-swizzle-0.2.2.tgz
+  /single-spa/5.5.4:
+    dev: false
+    resolution:
+      integrity: sha1-FUrUNUiZS5L7relQasQULf4Px4s=
+      tarball: single-spa/download/single-spa-5.5.4.tgz
   /sisteransi/1.0.5:
     dev: false
     resolution:
@@ -13862,6 +13893,7 @@ specifiers:
   postcss-normalize: 8.0.1
   postcss-preset-env: 6.7.0
   postcss-safe-parser: 4.0.1
+  qiankun: ^2.0.16
   react: ^16.13.1
   react-app-polyfill: ^1.0.6
   react-dev-utils: ^10.2.1
