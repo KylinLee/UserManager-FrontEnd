@@ -5,8 +5,8 @@ import React from "react";
 import "./Nav.scss";
 
 /* Components Lib */
-import { AlignLeftOutlined } from "@ant-design/icons";
 import { Input, Avatar } from "antd";
+import { AlignLeftOutlined } from "@ant-design/icons";
 
 const { Search } = Input;
 
