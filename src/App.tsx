@@ -16,22 +16,22 @@ import { Layout } from "antd";
 
 const { Header, Sider, Content } = Layout;
 
-function App() {
-    return (
-        <div className="App">
+class App extends React.Component {
+    render() {
+        return (
             <Router>
                 <Layout>
-                    <Header>
-                        <Nav />
-                    </Header>
+                    <Sider></Sider>
                     <Layout>
-                        <Sider></Sider>
+                        <Header>
+                            <Nav />
+                        </Header>
                         <Content>Content</Content>
                     </Layout>
                 </Layout>
             </Router>
-        </div>
-    );
+        );
+    }
 }
 
 export default App;

@@ -76,7 +76,7 @@ module.exports = function (webpackEnv) {
                 // css is located in `static/css`, use '../../' to locate index.html folder
                 // in production `paths.publicUrlOrPath` can be a relative path
                 options: paths.publicUrlOrPath.startsWith('.')
-                    ? {publicPath: '../../'}
+                    ? { publicPath: '../../' }
                     : {},
             },
             {
@@ -253,7 +253,7 @@ module.exports = function (webpackEnv) {
                             : false,
                     },
                     cssProcessorPluginOptions: {
-                        preset: ['default', {minifyFontValues: {removeQuotes: false}}],
+                        preset: ['default', { minifyFontValues: { removeQuotes: false } }],
                     },
                 }),
             ],
@@ -322,7 +322,7 @@ module.exports = function (webpackEnv) {
             strictExportPresence: true,
             rules: [
                 // Disable require.ensure as it's not a standard language feature.
-                {parser: {requireEnsure: false}},
+                { parser: { requireEnsure: false } },
 
                 // First, run the linter.
                 // It's important to do this before Babel processes the JS.
@@ -405,7 +405,7 @@ module.exports = function (webpackEnv) {
                                 presets: [
                                     [
                                         require.resolve('babel-preset-react-app/dependencies'),
-                                        {helpers: true},
+                                        { helpers: true },
                                     ],
                                 ],
                                 cacheDirectory: true,
@@ -450,6 +450,28 @@ module.exports = function (webpackEnv) {
                                     getLocalIdent: getCSSModuleLocalIdent,
                                 },
                             }),
+                        },
+                        // less
+                        {
+                            test: /\.less$/,
+                            include: [/node_modules\/antd/],
+                            use: [{
+                                loader: require.resolve('style-loader'),
+                            }, {
+                                loader: require.resolve('css-loader'), // translates CSS into CommonJS
+                            }, {
+                                loader: require.resolve('less-loader'), // compiles Less to CSS
+                                options: {
+                                    lessOptions: {
+                                        modifyVars: {
+                                            'primary-color': '#1DA57A',
+                                            'link-color': '#1DA57A',
+                                            'border-radius-base': '2px',
+                                        },
+                                        javascriptEnabled: true,
+                                    },
+                                },
+                            }]
                         },
                         // Opt-in support for SASS (using .scss or .sass extensions).
                         // By default we support SASS Modules with the
