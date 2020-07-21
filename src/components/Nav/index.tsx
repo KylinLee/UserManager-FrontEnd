@@ -1,53 +1,41 @@
 /* React */
-import React from "react";
+import * as React from "react";
 
 /* Components */
-import "./Nav.scss";
+import "./index.scss";
 
 /* Components Lib */
-import { Input, Avatar, Button } from "antd";
+import { Input, Button } from "antd";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 
 const { Search } = Input;
 
 class Nav extends React.Component {
-    state = {
-        collapsed: false,
+    props: {
+        collapsed;
+        trigger;
     };
-
-    toggle = () => {
-        this.setState({
-            collapsed: !this.state.collapsed,
-        });
-    };
-
     render() {
         return (
             <nav className="nav-bar">
                 {React.createElement(
-                    this.state.collapsed
+                    this.props.collapsed
                         ? MenuUnfoldOutlined
                         : MenuFoldOutlined,
                     {
                         className: "trigger",
-                        onClick: this.toggle,
+                        onClick: this.props.trigger,
                     }
                 )}
-                <Button type="primary">zhu</Button>
                 <Search
                     className="search-bar"
-                    placeholder="input search text"
+                    placeholder="键入搜索"
                     enterButton
                     size="middle"
                 />
-                <Avatar
-                    style={{
-                        color: "#f56a00",
-                        backgroundColor: "#fde3cf",
-                    }}
-                >
-                    U
-                </Avatar>
+                <Button type="primary" danger>
+                    退出登录
+                </Button>
             </nav>
         );
     }

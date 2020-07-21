@@ -1,18 +1,20 @@
 ---
-to: src/components/<%=name%>/<%=name%>.tsx
+to: src/components/<%=name%>/index.tsx
 ---
 /* React */
-import React from "react";
+import * as React from "react";
 
 /* Components */
-import "./Nav.scss";
+import "./index.scss";
 
 /* Components Lib */
-import * from "antd";
-import * from "@ant-design/icons";
+import {} from "antd";
+import {} from "@ant-design/icons";
 
-function <%=name%>(){
-    
+class <%=name%> extends React.Component{
+    render(){
+        
+    }
 }
 
 export default <%=name%>

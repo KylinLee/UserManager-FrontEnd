@@ -454,7 +454,6 @@ module.exports = function (webpackEnv) {
                         // less
                         {
                             test: /\.less$/,
-                            include: [/node_modules\/antd/],
                             use: [{
                                 loader: require.resolve('style-loader'),
                             }, {
@@ -464,9 +463,11 @@ module.exports = function (webpackEnv) {
                                 options: {
                                     lessOptions: {
                                         modifyVars: {
-                                            'primary-color': '#1DA57A',
-                                            'link-color': '#1DA57A',
-                                            'border-radius-base': '2px',
+                                            'primary-color': '#4CB050',
+                                            'link-color': '#007AFF',
+                                            'success-color': '#07C160',
+                                            "warning-color": "#FF9700",
+                                            "error-color": "#F56C6C",
                                         },
                                         javascriptEnabled: true,
                                     },
