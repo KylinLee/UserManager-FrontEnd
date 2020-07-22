@@ -1,6 +1,3 @@
----
-to: src/pages/<%=name%>/index.scss
----
 /* React */
 import * as React from "react";
 
@@ -11,11 +8,10 @@ import "./index.scss";
 import {} from "antd";
 import {} from "@ant-design/icons";
 
-class <%=name%> extends React.Component{
-    render(){
-        
+class Culture extends React.Component {
+    render() {
+        return <></>;
     }
 }
 
-export default <%=name%>
-
+export default Culture;

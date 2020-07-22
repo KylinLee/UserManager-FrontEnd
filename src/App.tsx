@@ -13,9 +13,10 @@ import Nav from "./components/Nav";
 import SideMenu from "./components/SideMenu";
 import About from "./pages/About";
 import Home from "./pages/Index";
+import Source from "./pages/SourceMan";
 
 /* Components Lib */
-import { Layout, Menu } from "antd";
+import { Layout } from "antd";
 import {
     PieChartOutlined,
     DesktopOutlined,
@@ -25,7 +26,6 @@ import {
 } from "@ant-design/icons";
 
 const { Header, Sider, Content } = Layout;
-const { SubMenu } = Menu;
 
 class App extends React.Component {
     state = {
@@ -66,6 +66,9 @@ class App extends React.Component {
                             <Switch>
                                 <Route path="/about">
                                     <About />
+                                </Route>
+                                <Route path="/source">
+                                    <Source />
                                 </Route>
                                 <Route path="/">
                                     <Home />

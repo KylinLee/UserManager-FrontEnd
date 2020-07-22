@@ -1,5 +1,5 @@
 ---
-to: src/pages/<%=name%>/index.scss
+to: src/pages/<%=name%>/index.tsx
 ---
 /* React */
 import * as React from "react";
@@ -13,9 +13,12 @@ import {} from "@ant-design/icons";
 
 class <%=name%> extends React.Component{
     render(){
-        
+        return (<></>)
     }
 }
 
 export default <%=name%>
+
+
+
 

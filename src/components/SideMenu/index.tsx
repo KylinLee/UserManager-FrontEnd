@@ -54,7 +54,7 @@ class SideMenu extends React.Component {
                     </SubMenu>
 
                     <Menu.Item key="9" icon={<FileOutlined />}>
-                        资源管理
+                        <Link to="source">资源管理</Link>
                     </Menu.Item>
                 </Menu>
             </>

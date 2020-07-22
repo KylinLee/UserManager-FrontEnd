@@ -13,7 +13,7 @@ import {} from "@ant-design/icons";
 
 class <%=name%> extends React.Component{
     render(){
-        
+        return (<></>)
     }
 }
 
