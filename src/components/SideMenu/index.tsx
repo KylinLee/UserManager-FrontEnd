@@ -25,7 +25,7 @@ class SideMenu extends React.Component {
                     <h1>IMAKER</h1>
                 </div>
                 <Menu theme="light" defaultSelectedKeys={["1"]} mode="inline">
-                    <Menu.Item key="1" icon={<PieChartOutlined />}>
+                    <Menu.Item key="main" icon={<PieChartOutlined />}>
                         <Link to="/">主控台</Link>
                     </Menu.Item>
 
@@ -41,6 +41,9 @@ class SideMenu extends React.Component {
                         <Menu.Item key="3">文化展示</Menu.Item>
                         <Menu.Item key="4">项目展示</Menu.Item>
                         <Menu.Item key="5">优秀成员</Menu.Item>
+                        <Menu.Item key="7">
+                            <Link to="news">新闻发布</Link>
+                        </Menu.Item>
                         <Menu.Item key="6">大事记</Menu.Item>
                     </SubMenu>
 

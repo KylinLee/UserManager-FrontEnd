@@ -14,6 +14,7 @@ import SideMenu from "./components/SideMenu";
 import About from "./pages/About";
 import Home from "./pages/Index";
 import Source from "./pages/SourceMan";
+import News from "./pages/News";
 
 /* Components Lib */
 import { Layout } from "antd";
@@ -22,20 +23,20 @@ import {
     DesktopOutlined,
     UserOutlined,
     TeamOutlined,
-    FileOutlined,
+    FileOutlined
 } from "@ant-design/icons";
 
 const { Header, Sider, Content } = Layout;
 
 class App extends React.Component {
     state = {
-        collapsed: false,
+        collapsed: false
     };
 
     toggle = () => {
         console.log("toggle");
         this.setState({
-            collapsed: !this.state.collapsed,
+            collapsed: !this.state.collapsed
         });
     };
 
@@ -53,7 +54,7 @@ class App extends React.Component {
                     </Sider>
 
                     <Layout>
-                        <Header style={{ backgroundColor: "#fff" }}>
+                        <Header style={{ backgroundColor: "#4cb050" }}>
                             <Nav
                                 collapsed={this.state.collapsed}
                                 trigger={this.toggle}
@@ -69,6 +70,9 @@ class App extends React.Component {
                                 </Route>
                                 <Route path="/source">
                                     <Source />
+                                </Route>
+                                <Route path="/news">
+                                    <News />
                                 </Route>
                                 <Route path="/">
                                     <Home />
